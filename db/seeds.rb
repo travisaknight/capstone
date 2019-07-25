@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create!(first_name: "Travis", last_name: "Knight", email: "travis@email.com", password: "password")
+User.create!(first_name: "Chimbly", last_name: "Bimbly", email: "chimbly@email.com", password: "password")
+User.create!(first_name: "Shaquille", last_name: "O'Neal", email: "shaquille@email.com", password: "password")
+
+Body_Category.create!(body_part: "Upper Body")
+Body_Category.create!(body_part: "Lower Body")
+Body_Category.create!(body_part: "Core")
+
+Muscle.create!(name: "Chest")
+Muscle.create!(name: "Back")
+Muscle.create!(name: "Shoulders")
+Muscle.create!(name: "Hamstrings")
+Muscle.create!(name: "Quadriceps")
+Muscle.create!(name: "Abs")
+
+Exercise.create!(name: "Push-ups", body_category_id: 1)
+Exercise.create!(name: "Pull-ups", body_category_id: 1)
+Exercise.create!(name: "Lunges", body_category_id: 2)
+Exercise.create!(name: "Deadlift", body_category_id: 2)
+Exercise.create!(name: "Pallof Press", body_category_id: 3)
+
+Muscle_Worked.create!(exercise_id: 1, muscle_id: 1, body_category_id: 1)
+Muscle_Worked.create!(exercise_id: 1, muscle_id: 3, body_category_id: 1)
+Muscle_Worked.create!(exercise_id: 2, muscle_id: 2, body_category_id: 1)
+Muscle_Worked.create!(exercise_id: 3, muscle_id: 4, body_category_id: 2)
+Muscle_Worked.create!(exercise_id: 3, muscle_id: 5, body_category_id: 2)
+Muscle_Worked.create!(exercise_id: 5, muscle_id: 6, body_category_id: 3)
+
+Workout.create!(user_id: 1, exercise_id: 1, sets: 3, reps: 10)
+Workout.create!(user_id: 1, exercise_id: 2, sets: 3, reps: 8)
+Workout.create!(user_id: 1, exercise_id: 3, sets: 3, reps: 12)
+Workout.create!(user_id: 2, exercise_id: 4, sets: 5, reps: 5)
+Workout.create!(user_id: 2, exercise_id: 5, sets: 4, reps: 8)
