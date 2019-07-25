@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_25_004545) do
+ActiveRecord::Schema.define(version: 2019_07_25_014753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "body_categories", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "body_part"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -23,14 +23,6 @@ ActiveRecord::Schema.define(version: 2019_07_25_004545) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
-    t.integer "body_category_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "muscle_workeds", force: :cascade do |t|
-    t.integer "exercise_id"
-    t.integer "muscle_id"
     t.integer "body_category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -56,6 +48,14 @@ ActiveRecord::Schema.define(version: 2019_07_25_004545) do
     t.integer "exercise_id"
     t.integer "sets"
     t.integer "reps"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "works", force: :cascade do |t|
+    t.integer "exercise_id"
+    t.integer "muscle_id"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
