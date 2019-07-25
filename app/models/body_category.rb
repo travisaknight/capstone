@@ -1,0 +1,2 @@
+class BodyCategory < ApplicationRecord
+end
