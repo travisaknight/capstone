@@ -1,0 +1,5 @@
+@exercises.map do |exercise|
+  { exercise_id: exercise.id,
+   name: exercise.name,
+   category_id: exercise.category_id }
+end
