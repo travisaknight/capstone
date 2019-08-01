@@ -2,9 +2,11 @@
   id: workout.id,
   user_id: workout.user_id,
   exercise_id: workout.exercise_id,
+  exercise: workout.exercise,
   sets: workout.sets,
   reps: workout.reps,
   created_at: workout.created_at,
   updated_at: workout.updated_at,
 
 }
+
