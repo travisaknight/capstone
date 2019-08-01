@@ -9,9 +9,8 @@ Rails.application.routes.draw do
 
     get "/exercises" => "exercises#index"
 
-    post "/workouts" => "workouts#create"
-
     get "/workouts" => "workouts#index"
+    post "/workouts" => "workouts#create"
     patch "/workouts/:id" => "workouts#update"
     delete "/workouts/:id" => "workouts#destroy"
   end
