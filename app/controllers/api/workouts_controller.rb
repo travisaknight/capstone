@@ -20,9 +20,11 @@ class Api::WorkoutsController < ApplicationController
     @workout.exercise_id = params[:exercise_id] || @workout.exercise_id
     @workout.sets = params[:sets] || @workout.sets
     @workout.reps = params[:reps] || @workout.reps
-    @workout.save
-
-    render "show.json.jb"
+    if @workout.save
+      render "show.json.jb"
+    else
+      render json: { error: @workout.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def destroy
