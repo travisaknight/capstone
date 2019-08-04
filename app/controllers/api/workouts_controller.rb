@@ -6,7 +6,7 @@ class Api::WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(
-      user_id: params[:user_id], #current_user.id
+      user_id: current_user.id,
       exercise_id: params[:exercise_id],
       sets: params[:sets],
       reps: params[:reps],

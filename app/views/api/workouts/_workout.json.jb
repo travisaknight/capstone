@@ -1,12 +1,12 @@
 {
   id: workout.id,
   user_id: workout.user_id,
+  user: workout.user.first_name,
   exercise_id: workout.exercise_id,
-  exercise: workout.exercise,
+  exercise: workout.exercise.name,
   sets: workout.sets,
   reps: workout.reps,
   created_at: workout.created_at,
   updated_at: workout.updated_at,
 
 }
-
