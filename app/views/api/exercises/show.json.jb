@@ -1,0 +1,3 @@
+render partial: "exercise.json.jb", locals: {
+  exercise: @exercise,
+}
