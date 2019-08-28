@@ -6,6 +6,7 @@
   exercise: workout.exercise.name,
   sets: workout.sets,
   reps: workout.reps,
+  weight: workout.weight,
   created_at: workout.created_at,
   updated_at: workout.updated_at,
 

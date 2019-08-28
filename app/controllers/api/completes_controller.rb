@@ -1,4 +1,6 @@
 class Api::CompletesController < ApplicationController
+  before_action :authenticate_user
+
   def index
     @completes = current_user.completes
     render "index.json.jb"
@@ -11,8 +13,11 @@ class Api::CompletesController < ApplicationController
       reps: params[:reps],
       weight: params[:weight],
     )
-    @complete.save
-    render "show.json.jb"
+    if @complete.save
+      render "show.json.jb"
+    else
+      render json: { error: @complete.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def show

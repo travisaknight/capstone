@@ -12,6 +12,7 @@ class Api::WorkoutsController < ApplicationController
       exercise_id: params[:exercise_id],
       sets: params[:sets],
       reps: params[:reps],
+      weight: params[:weight],
     )
     @workout.save
     render "show.json.jb"
@@ -26,6 +27,7 @@ class Api::WorkoutsController < ApplicationController
     @workout = Workout.find_by(id: params[:id])
     @workout.sets = params[:sets] || @workout.sets
     @workout.reps = params[:reps] || @workout.reps
+    @workout.weight = params[:weight] || @workout.weight
     if @workout.save
       render "show.json.jb"
     else
