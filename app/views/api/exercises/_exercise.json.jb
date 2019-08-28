@@ -5,4 +5,5 @@
   video_demo: exercise.video_url,
   sets: 0,
   reps: 0,
+  weight: 0,
   selected: false }
