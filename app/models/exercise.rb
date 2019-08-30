@@ -3,4 +3,5 @@ class Exercise < ApplicationRecord
   has_many :workouts
   has_many :works
   has_many :users, through: :workouts
+  has_many :completes
 end

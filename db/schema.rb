@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_003144) do
 
   create_table "completes", force: :cascade do |t|
     t.integer "workout_id"
+    t.integer "exercise_id"
     t.integer "sets"
     t.integer "reps"
     t.string "weight"
