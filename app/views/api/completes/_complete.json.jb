@@ -2,7 +2,6 @@
   id: complete.id,
   workout_id: complete.workout_id,
   sets: complete.sets,
-  exercise: complete.workout.exercise.name,
   reps: complete.reps,
   weight: complete.weight,
 }

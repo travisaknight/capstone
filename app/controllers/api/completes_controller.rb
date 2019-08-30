@@ -2,7 +2,7 @@ class Api::CompletesController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @completes = current_user.completes
+    @completes = Complete.all
     render "index.json.jb"
   end
 
