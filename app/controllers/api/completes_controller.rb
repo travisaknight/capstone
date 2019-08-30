@@ -9,6 +9,7 @@ class Api::CompletesController < ApplicationController
   def create
     @complete = Complete.new(
       workout_id: params[:workout_id],
+      exercise_id: params[:exercise_id],
       sets: params[:sets],
       reps: params[:reps],
       weight: params[:weight],
