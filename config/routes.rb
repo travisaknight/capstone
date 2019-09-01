@@ -21,5 +21,7 @@ Rails.application.routes.draw do
     get "/completes/:id" => "completes#show"
     patch "/completes/:id" => "completes#update"
     delete "/completes/:id" => "completes#destroy"
+
+    get "/completes_sum" => "completes_sum#rep_sum"
   end
 end
