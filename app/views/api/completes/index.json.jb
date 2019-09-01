@@ -1,3 +1,14 @@
-@completes.map do |complete|
-  render partial: "complete.json.jb", locals: { complete: complete }
+# @completes.map do |complete|
+#   render partial: "complete.json.jb", locals: { complete: complete }
+# end
+result = []
+groups = @completes.group_by { |complete| complete.exercise.name }
+groups.each do |key, value|
+  exercise_name = key
+  reps = value.reduce(0) { |sum, item| sum + item.reps }
+  result.push({
+    "exercise" => exercise_name,
+    "reps" => reps,
+  })
 end
+result
