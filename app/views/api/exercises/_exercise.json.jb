@@ -3,6 +3,7 @@
   category_id: exercise.category_id,
   category: exercise.category.body_part,
   video_demo: exercise.video_url,
+  description: exercise.description,
   sets: 0,
   reps: 0,
   weight: 0,

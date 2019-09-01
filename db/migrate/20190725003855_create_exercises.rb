@@ -4,6 +4,7 @@ class CreateExercises < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :category_id
       t.string :video_url
+      t.text :description
 
       t.timestamps
     end

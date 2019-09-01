@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_003144) do
     t.string "name"
     t.integer "category_id"
     t.string "video_url"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
