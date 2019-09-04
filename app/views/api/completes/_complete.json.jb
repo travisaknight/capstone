@@ -6,4 +6,5 @@
   # title: complete.title,
   reps: complete.reps,
   weight: complete.weight,
+  created_at: complete.created_at,
 }
