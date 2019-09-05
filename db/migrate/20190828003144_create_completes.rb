@@ -6,6 +6,7 @@ class CreateCompletes < ActiveRecord::Migration[6.0]
       t.integer :sets
       t.integer :reps
       t.string :weight
+      t.string :fake_created
 
       t.timestamps
     end

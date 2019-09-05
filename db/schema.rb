@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_003144) do
     t.integer "sets"
     t.integer "reps"
     t.string "weight"
+    t.string "fake_created"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

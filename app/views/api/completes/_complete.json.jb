@@ -3,8 +3,10 @@
   workout_id: complete.workout_id,
   exercise: complete.exercise.name,
   sets: complete.sets,
-  # title: complete.title,
   reps: complete.reps,
   weight: complete.weight,
+  fake_create: complete.fake_created,
+  created_at_calendar: complete.created_at.to_formatted_s(:long),
   created_at: complete.created_at,
+
 }
